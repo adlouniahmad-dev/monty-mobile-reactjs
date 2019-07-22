@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +10,126 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e8e7e7;
+  text-transform: uppercase;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-app {
+  width: 700px;
+  margin: 70px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 rgb(0, 0, 0, .06);
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header button,
+.person button {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  background: #79c8d4;
+  text-transform: uppercase;
+}
+
+.header button:hover,
+.person button:hover {
+  opacity: .8;
+}
+
+.header button {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.person button {
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.person .property .edit-button {
+  background-color: green;
+}
+
+.person .property .delete-button {
+  background-color: red;
+}
+
+form {
+  display: flex;
+  background: #fff;
+}
+
+.header input[type=text] {
+  flex-grow: 1;
+  border-width: 0 0 1px 0;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.header input[type=submit] {
+  display: block;
+  font-size: .6em;
+  margin: 10px 10px 10px 0; 
+  padding: 10px;
+  background-color: #79c8d4;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.person {
+  background: #fff;
+  box-shadow: 0 2px 0 rgb(0, 0, 0, .06);
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ececec;
+}
+
+.person:first-child {
+  margin-top: 5px;
+}
+
+.person:hover {
+  background: #f6f6f6;
+}
+
+.person .property {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.person .property .property-title {
+  color: #79c8d4;
+}
+
+.person .property.full-width {
+  width: 100%;
 }
